@@ -16,7 +16,7 @@ export default function AppMovieFilter({ movie }) {
 
     setFilmFiltrati(movie.filter(film => 
         (genereSelezionato === 'Tutti' || film.genre === genereSelezionato) && 
-        film.title.includes(title)
+        film.title.toLowerCase().includes(title.toLowerCase())
     ));
 
 }, [genereSelezionato, title]);
